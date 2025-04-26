@@ -1,0 +1,273 @@
+/* Fullscreen Retro Layout */
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+:root{
+    --pri-color: #f8f800;
+    --pri2-color: #afaf22;
+    --sec-color: #0b2855;
+    --tert-color: #141414;
+    --text-color: #ffffff;
+    --placeholder-color: #717171;
+    --error-color: #be3131;
+    --black-color: #010101;
+    --team-red-color: #dc143c;
+    --team-blue-color: #4169e1;
+}
+body, html {
+    margin: 0   ;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    font-family: 'Press Start 2P', cursive;
+    background: var(--tert-color) url('../images/bg/background_spy.png') no-repeat center center;
+    background-size: cover;
+    color: var(--text-color);
+    overflow: hidden;
+}
+#game-container {
+    width: 100%;
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: absolute; /*changed*/
+    /* background-color: #be3131; */
+}
+.menu-wrapper {
+    position: relative;
+    display: flex;
+    align-content: baseline;
+    justify-content: space-between;
+    align-items: flex-end;
+    width: 80%;
+    max-width: 900px;
+    padding: 10px;
+    margin-top: 450px;
+    gap: 40px;
+    /* background-color: #afaf22; */
+}
+
+.username-section {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    color: var(--text-color);
+    font-size: 20px;
+    font-weight: 600;
+    gap: 15px;
+}
+.room-menu{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    font-weight: 600;
+    gap: 15px;
+}
+
+.or-text{
+    font-size: 20px;
+    padding: 10px;
+    text-shadow: 2px 2px var(--sec-color);
+    color: var(--pri-color);
+}
+
+
+/* Title Text */
+h1 {
+    position: absolute;
+    top: 40px;
+    font-size: 44px;
+    color: var(--pri-color);
+    text-shadow: 4px 4px var(--sec-color);
+    margin-top: 30px;
+}
+
+
+/* ----------------------------------------------- */
+/* --- BUTTON & INPUTS ---*/
+button{
+    position: relative;
+    width: 300px;
+    height: 50px;
+    font-family: inherit;
+    color: var(--tert-color);
+    font-weight: 600;
+    text-shadow: var(--tert-color);
+    padding: 12px 20px;
+    font-size: 18px;
+    border: 4px solid var(--pri-color);
+    background-color: var(--pri2-color);
+    box-shadow: 3px 3px var(--tert-color);
+    cursor: pointer;
+    text-align: center;
+    transition: background 1ms;
+}
+button:hover {
+    background-color: var(--sec-color);
+    color: var(--pri2-color);
+}
+
+/* .some-events{
+    position: relative;
+    width: 300px;
+    height: 50px;
+    font-family: inherit;
+    color: var(--tert-color);
+    font-weight: 600;
+    text-shadow: var(--tert-color);
+    padding: 12px 20px;
+    font-size: 18px;
+    border: 4px solid var(--pri-color);
+    background-color: var(--pri2-color);
+    box-shadow: 3px 3px var(--tert-color);
+    text-align: center;
+    transition: background 1ms;
+} */
+.some-events--red{
+    background-color: var(--team-red-color);
+    color: var(--pri-color);
+    border-radius: 5px;
+    position: absolute;
+    font-size: 18px;
+    top:0px;
+    padding: 10px;    
+    right:30px;
+    width:auto;
+    height:auto;
+}
+.some-events--blue{
+    background-color: var(--team-blue-color);
+    color: var(--text-color);
+    border-radius: 5px;
+    position: absolute;
+    padding: 12px 20px;
+    font-size: 18px;
+    top:0px;    
+    right:30px;
+    width:450px;
+    height:24px;
+}
+
+.time-counter{
+    position: absolute;
+    top: 1%;
+    left: 50%;
+    transform: translate(-85%, -50%);
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--pri-color);
+    text-shadow: 3px 3px var(--sec-color);
+    margin-top: 35px;
+}
+.clue-box--red{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 12px;
+    color: var(--pri-color);
+}
+.clue-box--blue{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 12px;
+    color: var(--pri-color);
+}
+.clue-box--red span{
+    position: relative;
+    text-align: center;
+    height: auto;
+    width: auto;
+    border-radius: 5px;
+    padding: 10px;
+    background-color: var(--team-red-color);
+}
+.clue-box--blue span{
+    position: relative;
+    text-align: center;
+    height: auto;
+    width: auto;
+    border-radius: 5px;
+    padding: 10px;
+    background-color: var(--team-blue-color);
+}
+
+.guess-box{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 12px;
+    color: var(--pri-color);
+}
+.guess-box span:first-child{
+    position: relative;
+    text-align: center;
+    height: auto;
+    width: auto;
+    border-radius: 5px;
+    padding: 10px;
+    background-color: var(--team-red-color);
+}
+.guess-box span:last-child{
+    position: relative;
+    text-align: center;
+    height: auto;
+    width: auto;
+    border-radius: 5px;
+    padding: 10px;
+    background-color: var(--team-blue-color);
+}
+
+input,select{
+    position: relative;
+    width: 300px;
+    height: 40px;
+    font-family: inherit;
+    font-size: 15px;
+    border: 4px solid #fff;
+    background-color: var(--tert-color);
+    color: var(--pri-color);
+    box-shadow: 3px 3px var(--sec-color);
+    cursor: pointer;
+    text-align: center;
+    transition: background 0.1s;
+}
+
+/* ----------------------------------------------- */
+/* --- PLACEHOLDER FORMATTINGS & TEXT PROMPTS --- */
+
+select.placeholder{
+    color: var(--placeholder-color);
+}
+
+.Instruction-Prompts{
+    position: absolute;
+    font-size: 20px;
+    font-weight: 600;
+    text-shadow: 2px 2px var(--black-color);
+    top: 100%;
+    width: 400px;
+    text-align: center;
+    margin-top: 10px;
+    font-family: inherit;
+    color: var(--error-color);
+}
+.clue-sender{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+.clue-sender input:nth-of-type(2){
+    width: 60px;
+}
+
+/* ----------------------------------------------- */
