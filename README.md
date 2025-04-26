@@ -1,4 +1,4 @@
-
+![Slide1](https://github.com/user-attachments/assets/2529c71e-9c62-40c8-94d5-3e0e27bdd33d)
 ##  Game Overview
 
 This is a **4-player**, **team-based**, turn-driven game where two teams — 🔴 Red and 🔵 Blue — compete to guess their own words based on clues given by their spymaster. The game ends when a team finds all their words or triggers a losing condition.
